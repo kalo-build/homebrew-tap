@@ -5,21 +5,21 @@
 class Kalo < Formula
   desc "Kalo CLI - Plugin-based code generation and database management"
   homepage "https://github.com/kalo-build/kalo-cli"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.1/kalo_0.0.1_darwin_x86_64.tar.gz"
-      sha256 "9f66f1c43082fa7b2bca88e15865222473f3b2bc4f01184de763973ce263eb17"
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.2/kalo_0.0.2_darwin_x86_64.tar.gz"
+      sha256 "1e0b283dae389c8221f7c72190394eb1df3916f45eaa958698801989644aca00"
 
       def install
         bin.install "kalo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.1/kalo_0.0.1_darwin_arm64.tar.gz"
-      sha256 "cd33ac9340780f4767ccb4eeea0169abe3eaf99e6679b7c4595d99f2803a062c"
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.2/kalo_0.0.2_darwin_arm64.tar.gz"
+      sha256 "945922ebc8aafef6163af345b0712b7bbb35832759b7ef47097d3d4671e9ec1b"
 
       def install
         bin.install "kalo"
@@ -29,15 +29,15 @@ class Kalo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.1/kalo_0.0.1_linux_x86_64.tar.gz"
-      sha256 "d1f648ce3ef05498d015c8dfe736a2cbb182a7c176cde9053dad6b533c4628a4"
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.2/kalo_0.0.2_linux_x86_64.tar.gz"
+      sha256 "3315606b4f4d6ca3446af463888d60c77b9ee884a98105e733471f885e5b369b"
       def install
         bin.install "kalo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.1/kalo_0.0.1_linux_arm64.tar.gz"
-      sha256 "560ba3d9ba2de497b2036f0a45c75d72cdfc0cc601c694a863aec60589caadbf"
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.2/kalo_0.0.2_linux_arm64.tar.gz"
+      sha256 "7bd9a7f5b5769277b8e8fa2def3ccb0c68df3db8fc61a06b8351baeae88f6fc7"
       def install
         bin.install "kalo"
       end

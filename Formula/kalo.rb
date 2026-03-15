@@ -5,23 +5,23 @@
 class Kalo < Formula
   desc "Kalo CLI - Plugin-based code generation and database management"
   homepage "https://github.com/kalo-build/kalo-cli"
-  version "0.0.4"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.4/kalo_0.0.4_darwin_x86_64.tar.gz"
-      sha256 "f3b0dcb5a6591a334742d8515c2784f2aad8461a4da30b234179de1c3eee07e0"
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.1.0/kalo_0.1.0_darwin_x86_64.tar.gz"
+      sha256 "8dc79575cd1f17f03ab11961faed6b6a6779be8955307e5f3d8cfdbf77cf4ef0"
 
-      def install
+      define_method(:install) do
         bin.install "kalo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.4/kalo_0.0.4_darwin_arm64.tar.gz"
-      sha256 "b65de610d2fff3a551b204ebfa68992798fee20d2c5caa17c12822be2bfef7cd"
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.1.0/kalo_0.1.0_darwin_arm64.tar.gz"
+      sha256 "57789baf0cf077a68bb8ac90dbcd73c3b5a485b7a6b6b590cc55f55f49f4b984"
 
-      def install
+      define_method(:install) do
         bin.install "kalo"
       end
     end
@@ -29,16 +29,16 @@ class Kalo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.4/kalo_0.0.4_linux_x86_64.tar.gz"
-      sha256 "d42d61d557b598320b867e4c6505edad60eb6842f77a4d009e0a64f3d693eb4e"
-      def install
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.1.0/kalo_0.1.0_linux_x86_64.tar.gz"
+      sha256 "029400ae1cb90628415b4c92ae449d7fa88a3e595443486f7e75413380571e86"
+      define_method(:install) do
         bin.install "kalo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.0.4/kalo_0.0.4_linux_arm64.tar.gz"
-      sha256 "b040c1d44307f88fe547887b5c2ed81aace7684826b789d74e86566e905d7c3c"
-      def install
+      url "https://github.com/kalo-build/kalo-cli/releases/download/v0.1.0/kalo_0.1.0_linux_arm64.tar.gz"
+      sha256 "416e411f898bfb08e6c0ac45fb254a8c7ba7dee14b3333aaca97fcf8dd94c550"
+      define_method(:install) do
         bin.install "kalo"
       end
     end
